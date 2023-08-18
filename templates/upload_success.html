@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Services - Moderna Bootstrap Template</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,700,700i&display=swap"
+    rel="stylesheet">
+
+  <link href="{{ url_for('static', filename='img/favicon.png') }}" rel="icon">
+  <link href="{{ url_for('static', filename='img/apple-touch-icon.png') }}" rel="apple-touch-icon">
+
+
+  <!-- Vendor CSS Files -->
+  <link href="{{ url_for('static', filename='vendor/animate.css/animate.min.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='vendor/aos/aos.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='vendor/bootstrap-icons/bootstrap-icons.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='vendor/boxicons/css/boxicons.min.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='vendor/glightbox/css/glightbox.min.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+
+  <style>
+    /* Additional styling for demonstration */
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .large-icon {
+      font-size: 96px;
+      color: #007bff;
+      /* Change color as needed */
+    }
+
+    .record-button {
+      background-color: #dc3545;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      padding: 10px 20px;
+      cursor: pointer;
+      font-size: 18px;
+      transition: background-color 0.3s;
+    }
+
+    .record-button:hover {
+      background-color: #c82333;
+    }
+
+    /*   
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        } */
+
+    /* .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        } */
+
+    h1 {
+      text-align: center;
+    }
+
+    .report-entry {
+      margin: 10px 0;
+      padding: 10px;
+      border: 1px solid #ccc;
+      background-color: #f9f9f9;
+    }
+
+    .entry-label {
+      font-weight: bold;
+    }
+
+    .entry-value {
+      margin-left: 10px;
+    }
+  </style>
+
+</head>
+
+<body>
+
+
+
+  <!-- ======= Header ======= -->
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center ">
+    <div class="container d-flex justify-content-between align-items-center">
+
+      <div class="logo">
+        <h1 class="text-light"><a href="/"><span>AIHealthLinkup</span></a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      </div>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/team">Team</a></li>
+          <li><a href="/blog">Blog</a></li>
+          <li><a href="/predict">Get Your PD Report</a></li>
+
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  </header><!-- End Header -->
+
+  <div class="container">
+    <div class="col-md-12">
+
+      {% if temp==1 %}
+      <h1>Result</h1> 
+
+      {% if s1=='No'%}
+      <h2 style="color: green;">From your speech analysis report it is {{probability}}% sure that you don't have
+        symptoms of Parkinson Disease</h2>
+      {% else %}
+      <h2 style="color: red;">From your speech analysis report it is {{probability}}% sure that you have symptoms of
+        Parkinson Disease </h2>
+      {% endif %}
+      <h1>Medical Report</h1>
+
+      <div class="report-entry">
+        <span class="entry-label">Average vocal fundamental frequency(MDVP:Fo(Hz)):</span>
+        <span class="entry-value">{{data.loc[0, 'MDVP:Fo(Hz)']}}</span>
+      </div>
+      <div class="report-entry">
+        <span class="entry-label">Maximum vocal fundamental frequency(MDVP:Fhi(Hz)):</span>
+        <span class="entry-value">{{data.loc[0, 'MDVP:Fhi(Hz)']}}</span>
+      </div>
+      <div class="report-entry">
+        <span class="entry-label">Minimum vocal fundamental frequency(MDVP:Flo(Hz)):</span>
+        <span class="entry-value">{{data.loc[0, 'MDVP:Flo(Hz)']}}</span>
+      </div>
+      <div class="report-entry">
+        <span class="entry-label">Several measures of variation in fundamental frequency(MDVP:Jitter(%)):</span>
+        <span class="entry-value">{{data.loc[0, 'MDVP:Jitter(%)']}}</span>
+      </div>
+      <div class="report-entry">
+        <span class="entry-label"> Several measures of variation in amplitude(MDVP:Shimmer):</span>
+        <span class="entry-value">{{data.loc[0, 'Shimmer']}}</span>
+      </div>
+
+
+      <div class="report-entry">
+        <span class="entry-label">Two measures of the ratio of noise to tonal components in the voice(NHR, HNR):</span>
+        <span class="entry-value">{{data.loc[0, 'NHR']}} and {{data.loc[0, 'HNR']}}</span>
+      </div>
+
+      <div class="report-entry">
+        <span class="entry-label">Two nonlinear dynamical complexity measures(RPDE, D2):</span>
+        <span class="entry-value">{{data.loc[0, 'RPDE']}} and {{data.loc[0, 'D2']}}</span>
+      </div>
+
+      <div class="report-entry">
+        <span class="entry-label"> Signal fractal scaling exponent(DFA):</span>
+        <span class="entry-value">{{data.loc[0, 'DFA']}}</span>
+      </div>
+
+      <div class="report-entry">
+        <span class="entry-label">Three nonlinear measures of fundamental frequency variation(spread1,spread2,PPE):</span>
+        <span class="entry-value">{{data.loc[0, 'spread1']}} ,{{data.loc[0, 'spread2']}} and {{data.loc[0, 'PPE']}}</span>
+      </div>
+
+      {% elif temp==3%}
+
+      <h2 style="color: red;">Please Upload File Again</h2>
+      <a href="/upload" class="btn-get-started animate__animated animate__fadeInUp">Upload Your File</a>
+
+
+      {% else %}
+      {% if status=='Success'%}
+      <h2 style="color: green;"> File has been saved Successfully</h2>
+      <a href="/getstatus" class="btn-get-started animate__animated animate__fadeInUp">Get Your Report</a>
+
+      {% else %}
+      <h2 style="color: red;"> Try Again, File is not saved yet!!!!</h2>
+      {% endif %}
+
+      {% endif %}
+
+
+    </div>
+  </div>
+
+
+  </main><!-- End #main -->
+
+</body>
+
+</html>

@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Google Fonts -->
+   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,700,700i&display=swap" rel="stylesheet">
+
+    <link href="{{ url_for('static', filename='img/favicon.png') }}" rel="icon">
+    <link href="{{ url_for('static', filename='img/apple-touch-icon.png') }}" rel="apple-touch-icon">
+    
+    
+    <!-- Vendor CSS Files -->
+    <link href="{{ url_for('static', filename='vendor/animate.css/animate.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='vendor/aos/aos.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='vendor/bootstrap-icons/bootstrap-icons.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='vendor/boxicons/css/boxicons.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='vendor/glightbox/css/glightbox.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet">
+
+     <!-- Template Main CSS File -->
+   <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+        
+</head>
+<body>
+
+    <!-- ======= Header ======= -->
+    <header id="header" class="fixed-top d-flex align-items-center header-transparent">
+      <div class="container d-flex justify-content-between align-items-center">
+  
+        <div class="logo">
+          <h1 class="text-light"><a href="/"><span>AIHealthLinkup</span></a></h1>
+          <!-- Uncomment below if you prefer to use an image logo -->
+          <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+        </div>
+  
+        <nav id="navbar" class="navbar">
+          <ul>
+            <li><a class="active" href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/team">Team</a></li>
+            <li><a href="/blog">Blog</a></li>
+            <li><a href="/predict">Get Your PD Report</a></li>
+            
+          </ul>
+          <i class="bi bi-list mobile-nav-toggle"></i>
+        </nav><!-- .navbar -->
+  
+      </div>
+    </header><!-- End Header -->
+  
+    <!-- ======= Hero Section ======= -->
+    <section id="hero" class="d-flex justify-cntent-center align-items-center">
+      <div id="heroCarousel" class="container carousel carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
+  
+        <!-- Slide 1 -->
+        <div class="carousel-item active">
+          <div class="carousel-container">
+            <h2 class="animate__animated animate__fadeInDown">Welcome to <span>AI Health Linkup</span></h2>
+            <p class="animate__animated animate__fadeInUp"> Your comprehensive resource for detecting Parkinson's disease through speech analysis and gaining insights into this condition. Our platform combines advanced AI technology with medical expertise to provide a user-friendly and accurate solution for early detection and awareness.</p>
+            <a href="{{ url_for('predict_page') }}" class="btn-get-started animate__animated animate__fadeInUp">Detect Parkinson</a>
+          </div>
+        </div>
+  
+      </div>
+    </section><!-- End Hero -->
+  
+    <main id="main">
+  
+      <!-- ======= Services Section ======= -->
+      <section class="services">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up">
+              <div class="icon-box icon-box-pink">
+                <div class="icon"><i class="bx bxl-dribbble"></i></div>
+                <h4 class="title">Expertise in Voice Analysis<a href=""></a></h4>
+                <p class="description">Our team comprises skilled professionals in both medical and technology domains, enabling us to harness the power of voice analysis for accurate Parkinson's detection.</p>
+              </div>
+            </div>
+  
+            <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+              <div class="icon-box icon-box-cyan">
+                <div class="icon"><i class="bx bx-file"></i></div>
+                <h4 class="title"><a href="">Data-Driven Precision</a></h4>
+                <p class="description">Backed by extensive training on the Parkinson's Disease Data Set, our platform ensures precise identification of potential indicators, enhancing early intervention possibilities.</p>
+              </div>
+            </div>
+  
+            <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
+              <div class="icon-box icon-box-green">
+                <div class="icon"><i class="bx bx-tachometer"></i></div>
+                <h4 class="title"><a href="">Empowering Informed Decisions</a></h4>
+                <p class="description">We empower individuals and healthcare providers with personalized insights, aiding informed decisions and proactive management of Parkinson's disease.</p>
+              </div>
+            </div>
+  
+            <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
+              <div class="icon-box icon-box-blue">
+                <div class="icon"><i class="bx bx-world"></i></div>
+                <h4 class="title"><a href="">Transforming Lives Together</a></h4>
+                <p class="description">By merging medical insights with technological innovation, we strive to transform lives, raising the bar for early detection, understanding, and care of Parkinson's disease.</p>
+              </div>
+            </div>
+  
+          </div>
+  
+        </div>
+      </section><!-- End Services Section -->
+  
+      <!-- ======= Why Us Section =======
+      <section class="why-us section-bg" data-aos="fade-up" date-aos-delay="200">
+        <div class="container">
+  
+          <div class="row">
+            <div class="col-lg-6 video-box">
+              <img src="{{ url_for('static', filename='img/why-us.jpg') }}" class="img-fluid" alt="">
+              <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="venobox play-btn mb-4" data-vbtype="video" data-autoplay="true"></a>
+            </div>
+  
+            <div class="col-lg-6 d-flex flex-column justify-content-center p-5">
+  
+              <div class="icon-box">
+                <div class="icon"><i class="bx bx-fingerprint"></i></div>
+                <h4 class="title"><a href="">Lorem Ipsum</a></h4>
+                <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
+              </div>
+  
+              <div class="icon-box">
+                <div class="icon"><i class="bx bx-gift"></i></div>
+                <h4 class="title"><a href="">Nemo Enim</a></h4>
+                <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque</p>
+              </div>
+  
+            </div>
+          </div>
+  
+        </div>
+      </section>End Why Us Section -->  
+  
+      <!-- ======= Features Section ======= -->
+      <section class="features">
+        <div class="container">
+  
+          <div class="section-title">
+            <h2>Features</h2>
+            <p>Explore the array of sophisticated features that drive our cutting-edge Parkinson's early detection platform, revolutionizing the way we identify and address the disease. From state-of-the-art voice analysis to intuitive user interfaces, our platform offers a comprehensive suite of tools designed to provide accurate and timely insights for better patient outcomes.</p>
+          </div>
+  
+          <div class="row" data-aos="fade-up">
+            <div class="col-md-5">
+              <img src="{{ url_for('static', filename='img/features-1.svg') }}" class="img-fluid" alt="">
+            </div>
+            <div class="col-md-7 pt-4">
+              <h3>Interactive Visualizations</h3>
+              <!-- <p class="fst-italic">
+
+
+              </p> -->
+              <ul>
+                <li><i class="bi bi-check"></i> We Display interactive graphs, charts, and diagrams illustrating how voice features correlate with Parkinson's disease progression.</li>
+                <li><i class="bi bi-check"></i> We use animations or sliders to demonstrate changes in voice characteristics over time or as the disease advances.</li>
+              </ul>
+            </div>
+          </div>
+  
+          <div class="row" data-aos="fade-up">
+            <div class="col-md-5 order-1 order-md-2">
+              <img src="{{ url_for('static', filename='img/features-2.svg') }}" class="img-fluid" alt="">
+            </div>
+            <div class="col-md-7 pt-5 order-2 order-md-1">
+              <h3>Demo or Simulator</h3>
+              <ul>
+                <li><i class="bi bi-check"></i>Interactive demo where users can upload or record their own voice samples to see how your system detects potential signs of Parkinson's disease.</li>
+                <li><i class="bi bi-check"></i>Simulated results and explanations to enhance user understanding.</li>
+              </ul>
+            </div>
+          </div>
+  
+          <div class="row" data-aos="fade-up">
+            <div class="col-md-5">
+                <img src="{{ url_for('static', filename='img/features-3.svg') }}" class="img-fluid" alt="">
+            </div>
+            <div class="col-md-7 pt-5">
+              <h3>Voice Sample Collection</h3>
+              <ul>
+                <li><i class="bi bi-check"></i> User-friendly interface for collecting voice samples, guiding users through the process step by step.</li>
+                <li><i class="bi bi-check"></i> We Offer tips for optimal sample collection, such as noise reduction and consistent vocalization.</li>
+              </ul>
+            </div>
+          </div>
+  
+          <div class="row" data-aos="fade-up">
+            <div class="col-md-5 order-1 order-md-2">
+              <img src="{{ url_for('static', filename='img/features-4.svg') }}" class="img-fluid" alt="">
+            </div>
+            <div class="col-md-7 pt-5 order-2 order-md-1">
+              <h3>Data Privacy Assurance</h3>
+              <ul>
+                <li><i class="bi bi-check"></i> We clearly outline your data privacy policies, emphasizing that user data will be securely stored and used only for research purposes.</li>
+                <li><i class="bi bi-check"></i> We incorporate encryption and secure data handling practices.</li>
+              </ul>
+            </div>
+          </div>
+  
+        </div>
+      </section><!-- End Features Section -->
+  
+    </main><!-- End #main -->
+  
+    <!-- ======= Footer ======= -->
+    <footer id="footer" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="500">
+      <div class="container">
+        <div class="copyright">
+          &copy; Copyright <strong><span>AIHealthLinkup</span></strong>. All Rights Reserved
+        </div>
+        <div class="credits">
+          <!-- All the links in the footer should remain intact. -->
+          <!-- You can delete the links only if you purchased the pro version. -->
+          <!-- Licensing information: https://bootstrapmade.com/license/ -->
+          <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/free-bootstrap-template-corporate-moderna/ -->
+          Designed by <a href="https://bootstrapmade.com/">AIHealthLinkup</a>
+        </div>
+      </div>
+    </footer><!-- End Footer -->
+  
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  
+    <!-- Vendor JS Files -->
+    <script src="{{ url_for('static', filename='vendor/purecounter/purecounter_vanilla.js') }}"></script>
+    <script src="{{ url_for('static', filename='vendor/aos/aos.js') }}"></script>
+    <script src="{{ url_for('static', filename='vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='vendor/glightbox/js/glightbox.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='vendor/isotope-layout/isotope.pkgd.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='vendor/swiper/swiper-bundle.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='vendor/waypoints/noframework.waypoints.js') }}"></script>
+    <script src="{{ url_for('static', filename='vendor/php-email-form/validate.js') }}"></script>
+  
+    <!-- Template Main JS File -->
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+  
+  </body>
+  
+</html>

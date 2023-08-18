@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Blog - Moderna Bootstrap Template</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,700,700i&display=swap"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{{ url_for('static', filename='vendor/animate.css/animate.min.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='vendor/aos/aos.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='vendor/bootstrap-icons/bootstrap-icons.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='vendor/boxicons/css/boxicons.min.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='vendor/glightbox/css/glightbox.min.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Moderna
+  * Updated: Jul 27 2023 with Bootstrap v5.3.1
+  * Template URL: https://bootstrapmade.com/free-bootstrap-template-corporate-moderna/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center ">
+    <div class="container d-flex justify-content-between align-items-center">
+
+      <div class="logo">
+        <h1 class="text-light"><a href="/"><span>AIHealthLinkup</span></a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      </div>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="active" href="/">Home</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/team">Team</a></li>
+          <li><a class="active" href="/blog">Blog</a></li>
+          <li><a href="/predict">Get Your PD Report</a></li>
+          
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main">
+
+    <!-- ======= Blog Section ======= -->
+    <section class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>Blog</h2>
+
+          <ol>
+            <li><a href="/">Home</a></li>
+            <li>Blog</li>
+          </ol>
+        </div>
+
+      </div>
+    </section><!-- End Blog Section -->
+
+    <!-- ======= Blog Section ======= -->
+    <section id="blog" class="blog">
+      <div class="container">
+
+        <div class="row">
+
+          <div class="col-lg-12 entries">
+
+
+            <article class="entry">
+
+              <div class="entry-img">
+                <img src="assets/img/blog/blog-1.jpg" alt="" class="img-fluid">
+              </div>
+
+              <h2 class="entry-title">
+                <a href="blog-single.html">Unlocking New Frontiers: Early Detection of Parkinson's Disease through Voice Sample Collection</a>
+              </h2>
+
+              <!-- <div class="entry-meta">
+                <ul>
+                  <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="blog-single.html">John
+                      Doe</a></li>
+                  <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="blog-single.html"><time
+                        datetime="2020-01-01">Jan 1, 2020</time></a></li>
+                  <li class="d-flex align-items-center"><i class="bi bi-chat-dots"></i> <a href="blog-single.html">12
+                      Comments</a></li>
+                </ul>
+              </div> -->
+
+              <div class="entry-content">
+                <p>
+                  Parkinson's disease is a progressive neurological disorder that affects millions of people worldwide. While
+            there is currently no cure, early detection plays a crucial role in improving treatment outcomes and
+            enhancing the quality of life for those affected. In recent years, advancements in data science and
+            technology have opened up new possibilities for detecting Parkinson's disease at its earliest stages. One
+            innovative approach gaining momentum is the use of voice sample collection and analysis. In this blog, we
+            will delve into the exciting world of data-driven early detection and explore how analyzing voice samples
+            could revolutionize the way we identify Parkinson's disease.
+                </p>
+                <!-- <div class="read-more">
+                  <a href="blog-single.html">Read More</a>
+                </div> -->
+                <br/>
+                <h2>The Voice as a Window into Health:</h2>
+                <p>The human voice is a powerful tool that carries a wealth of information about our health and well-being.
+                  Subtle changes in vocal patterns, pitch, tone, and even tremors can provide valuable insights into
+                  neurological conditions. Researchers have long recognized the potential of the voice as a diagnostic tool,
+                  and recent advancements in machine learning and artificial intelligence have paved the way for more accurate
+                  and efficient analysis.</p>
+                <br/>
+                <h2>How Voice Sample Collection Works:</h2>
+                <p>The process of early Parkinson's detection through voice sample collection involves several key steps:</p>
+                <ol>
+                  <li>Data Collection: Individuals provide voice samples using a user-friendly interface. These samples can be
+                    recorded using a smartphone or computer microphone, making it convenient for users.</li>
+                  <li>Feature Extraction: Advanced algorithms extract a range of voice features, such as pitch modulation,
+                    speech rate, pauses, and jitter. These features are then analyzed for patterns that could indicate the
+                    presence of Parkinson's disease.</li>
+                  <li>Machine Learning Analysis: Machine learning models are trained on large datasets of both healthy and
+                    Parkinson's-afflicted voices. These models learn to recognize subtle differences in voice characteristics
+                    associated with the disease.</li>
+                  <li>Diagnostic Output: Based on the analysis, the system provides a diagnostic output indicating the
+                    likelihood of Parkinson's disease. Users receive actionable insights that can guide them to seek further
+                    medical evaluation.</li>
+                </ol>
+              </div>
+
+            </article><!-- End blog entry -->
+
+
+            <article class="entry">
+
+              <div class="entry-img">
+                <img src="assets/img/blog/blog-4.jpg" alt="" class="img-fluid">
+              </div>
+
+              <h2 class="entry-title">
+                <a href="blog-single.html">Advantages of Voice Sample Collection</a>
+              </h2>
+
+              <!-- <div class="entry-meta">
+                <ul>
+                  <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="blog-single.html">John
+                      Doe</a></li>
+                  <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="blog-single.html"><time
+                        datetime="2020-01-01">Jan 1, 2020</time></a></li>
+                  <li class="d-flex align-items-center"><i class="bi bi-chat-dots"></i> <a href="blog-single.html">12
+                      Comments</a></li>
+                </ul>
+              </div> -->
+
+              <div class="entry-content">
+                <ul>
+                  <li>Non-Invasive: Collecting voice samples is non-invasive and doesn't require any medical procedures or
+                    equipment.</li>
+                  <li>Early Detection: The approach has the potential to identify Parkinson's disease in its early stages,
+                    enabling timely intervention and treatment.</li>
+                  <li>Accessibility: Voice sample collection can be done remotely, making it accessible to a wide range of
+                    individuals, including those in rural or underserved areas.</li>
+                  <li>Continuous Monitoring: With regular voice sample collection, the system can monitor changes in vocal
+                    patterns over time, providing valuable longitudinal data.</li>
+                </ul>
+                <br/>
+                <h2>Challenges and Future Directions</h2>
+
+          <p>While the potential of voice sample analysis for Parkinson's detection is promising, there are challenges
+            to overcome. Variability in voice patterns due to factors like age, gender, and background noise requires
+            careful consideration. Ongoing research aims to refine algorithms and incorporate additional data sources,
+            such as gait analysis and wearable sensors, to enhance accuracy.</p>
+
+            <br/>
+
+          <h2>Conclusion</h2>
+
+          <p>The intersection of data science, machine learning, and healthcare is driving groundbreaking innovations in
+            early disease detection. Voice sample collection presents an exciting avenue for identifying Parkinson's
+            disease at its earliest stages, offering hope for improved outcomes and a better quality of life for
+            patients. As research continues and technology evolves, we are on the brink of a new era in Parkinson's
+            diagnosis—one that relies on the power of the human voice to reveal insights about our health like never
+            before.</p>
+
+          <p>By harnessing the potential of voice analysis, we are not only changing the way we approach Parkinson's
+            disease detection but also paving the way for a future where data-driven insights transform the landscape of
+            healthcare for the better.</p>
+                <!-- <div class="read-more">
+                  <a href="blog-single.html">Read More</a>
+                </div> -->
+              </div>
+
+            </article><!-- End blog entry -->
+
+            <div class="blog-pagination">
+              <ul class="justify-content-center">
+                <li class="active"><a href="#">1</a></li>
+              </ul>
+            </div>
+
+          </div><!-- End blog entries list -->
+
+        </div>
+
+      </div>
+    </section><!-- End Blog Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="500">
+  
+    <div class="footer-newsletter">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6">
+            <h4>Our Newsletter</h4>
+            <p>Signup and subscribe to our daily newsletter that provides up-to-date news on parkinson's disease detection, prevention and cure.</p>
+          </div>
+          <div class="col-lg-6">
+            <form action="" method="post">
+              <input type="email" name="email"><input type="submit" value="Subscribe">
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Our Services</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h4>Contact Us</h4>
+            <p>
+              A108 Adam Street <br>
+              New York, NY 535022<br>
+              United States <br><br>
+              <strong>Phone:</strong> +1 5589 55488 55<br>
+              <strong>Email:</strong> info@example.com<br>
+            </p>
+
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-info">
+            <h3>About Moderna</h3>
+            <p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies darta donna mare fermentum iaculis eu non diam phasellus.</p>
+            <div class="social-links mt-3">
+              <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+              <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+              <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+              <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Moderna</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/free-bootstrap-template-corporate-moderna/ -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="{{ url_for('static', filename='vendor/purecounter/purecounter_vanilla.js') }}"></script>
+  <script src="{{ url_for('static', filename='vendor/aos/aos.js') }}"></script>
+  <script src="{{ url_for('static', filename='vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='vendor/glightbox/js/glightbox.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='vendor/isotope-layout/isotope.pkgd.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='vendor/swiper/swiper-bundle.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='vendor/waypoints/noframework.waypoints.js') }}"></script>
+  <script src="{{ url_for('static', filename='vendor/php-email-form/validate.js') }}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+</body>
+
+</html>
